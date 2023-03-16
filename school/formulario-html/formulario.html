@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+
+        .BT1 {
+            width: 100px;
+            height: 70px;
+            background: #F2F2F2;
+            font-size: 20px;
+            transition: 1s;
+        }
+
+        .BT1:hover {
+            background: green;
+            cursor: pointer;
+        }
+
+        .BT2 {
+            width: 70px;
+            height: 40px;
+            background: #F2F2F2;
+            font-size: 10px;
+            transition: 1s;
+        }
+
+        .BT2:hover {
+            background: darkred;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .comentario {
+            width: 90%;
+            height: 200px;
+            resize: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <fieldset>
+
+        <!-- FAZ UMA BORDA COM TEXTO EM CIMA ( FIELDSET )-->
+        <legend>PICOLÉ DO PAULO</legend>
+
+            <p>Selecione um sabor: </p>
+            
+                <select>
+                    <option>Pimenta</option>
+                    <option>Batata inglesa</option>
+                    <option>Mistura de reboco</option>
+                    <option>Resto de comida da pia</option>
+                    <option>Metanfetamina</option>
+                </select>
+
+            <br> <br>
+
+            <p>Selecione um molho especial: </p>
+
+                <input type="radio" name="molhos">Ácido sulfúrico
+                <input type="radio" name="molhos">Enxofre líquido
+                <input type="radio" name="molhos">Água do rio cachoeira
+                <input type="radio" name="molhos">Água de poça
+
+            <!-- NAME TEM SEMPRE DE SER IGUAL PARA SÓ SER POSSÍVEL SELECIONAR UM -->
+            
+            <p>Escolha a cor da embalagem: </p>
+
+                <input type="checkbox">Preta    &nbsp;  &nbsp; <!-- COMANDO PARA DAR E S P A Ç O -->
+                <input type="checkbox">Marrom   &nbsp;  &nbsp;
+                <input type="checkbox">Azul   &nbsp;  &nbsp;
+
+            <p>Escolha a cor do palito: </p> <input type="color">
+
+    </fieldset>
+
+    <fieldset>
+
+        <legend>Dados de entrega: </legend>
+
+            <p>CEP: </p> <input type="text">
+            <br>
+            <p>Complemento: </p> <input type="text">
+            <br>
+            <p>Data de entrega: </p> <input type="date">
+            <br>
+            <p>Comentários: </p> <br>
+            <textarea class="comentario"> </textarea>
+
+
+    </fieldset>
+
+    <br> <br>
+
+    <button class="BT1"> ENVIAR </button>
+    <button class="BT2"> CANCELAR </button>
+
+            <!--
+            <section id="formulario" class="centralizar aparecer">
+
+                <form>
+
+                    <p>Por acaso seu nome é William?</p>
+                    <input type="radio" id="nome-sim" name="nome">
+                    <label for="nome-sim">Sim</label>
+                    <input type="radio" id="nome-nao" name="nome">
+                    <label for="nome-nao">Não</label>
+
+                    <p>Você faz aniversário dia 22 de fevereiro?</p>
+                    <input type="radio" id="data-sim" name="data">
+                    <label for="nome-sim">Sim</label>
+                    <input type="radio" id="data-nao" name="data">
+                    <label for="nome-nao">Não</label>
+
+                </form>
+
+            </section>
+
+            -->
+
+</body>
+</html>

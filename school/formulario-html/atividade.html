@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativdade formulário</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <br> <br>
+        Nome: <input type="text">
+        <br> <br>
+        Endereço: <input type="text">
+        <br> <br>
+        Cidade: <input type="text">
+        <br> <br>
+
+        <p>Estado: </p>
+
+            <select>
+                <option>São Paulo</option>
+                <option>Paraná</option>
+                <option>Santa Catarina</option>
+            </select>
+
+    </fieldset>
+        
+    <fieldset>
+        <legend>Dados profissionais</legend>
+
+        <br> <br>
+        Natureza de cargos: 
+        <br> <br>
+
+        <input type="radio" class="cargos" id="gerencia" name="cargos">Gerência  &nbsp;  &nbsp;
+        <input type="radio" class="cargos" id="financeiro" name="cargos">Financeiro    &nbsp;  &nbsp;
+        <input type="radio" class="cargos" id="recepcao" name="cargos">Recepção  &nbsp;  &nbsp;
+        <input type="radio" class="cargos" id="administrativo" name="cargos">Administrativo    &nbsp;  &nbsp;
+        <input type="radio" class="cargos" id="juridico" name="cargos">Juridico  &nbsp;  &nbsp;
+
+        <br> <br>
+
+        Area de interesse:
+        <br> <br>
+
+        <input type="checkbox" class="ais">Computação   &nbsp;  &nbsp;
+        <input type="checkbox" class="ais">Biologia &nbsp;  &nbsp;
+        <input type="checkbox" class="ais">Meio Ambiente    &nbsp;  &nbsp;
+        <input type="checkbox" class="ais">Engenharia   &nbsp;  &nbsp;
+        <input type="checkbox" class="ais">História &nbsp;  &nbsp;
+
+        <br> <br>
+        
+        <p>Curriculo: </p> <textarea class="texto"></textarea>
+
+    </fieldset>
+    <br> <br>
+
+    <button class="bt">ENVIAR</button>
+    <button class="bt">LIMPAR</button>
+
+</body>
+</html>

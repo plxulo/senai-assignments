@@ -1,0 +1,78 @@
+body {
+    margin: 10;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.centralizar {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 7rem;
+    animation: floating 5s infinite alternate;
+}
+
+@keyframes floating {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px); /* mover os elementos no eixo Y em - 25 px e dps voltar para 0 px */
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+button {
+    color: black;
+    font-size: 1rem;
+    margin: 0px 5px 20px 0px;
+    padding: 15px;
+    border-style: solid;
+    transition: 1s;
+}
+
+.quero {
+    transition: 1s;
+}
+
+.nao-quero {
+    transition: 1s;
+}
+
+.quero:hover {
+    background: green;
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+.nao-quero:hover {
+    background: darkred;
+    cursor: pointer;
+    color: #f2f2f2;
+}
+
+.aparecer {
+    opacity: 0;
+    transform: translateY(-500px);
+    transition: opacity 1s ease-in-out, transform 1s;
+}
+
+.aparecer.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+form {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0px 0px 20px 0px;
+}
