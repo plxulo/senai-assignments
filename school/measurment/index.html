@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanhos em CSS</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            font-size: 40px;
+            margin: 0px;
+        }
+        .D1
+        {
+            font-size: 1em;
+            width: 80%;
+            background-color: bisque;
+           
+        }
+        .D2
+        {
+            font-size: 2rem;
+            width: 50%;
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+
+    Esta linha pertence somente ao body.  <br>   <br>
+
+    <div class="D1">
+        
+        Este é o texto da D1 <br> <br>
+
+        <div class="D2">
+            Aqui já estou no texto da D2 que está dentro da D1.
+        </div>
+
+    </div>
+
+<!--
+    Este bloco de código é um comentário e servirá para você digitar suas respostas.
+    RESPONDA AS QUESTÕES ABAIXO:
+    
+    1) Qual a propriedade CSS que D1 e D2 possuem em comum e que tem unidade de medida diferente no CSS do body ?
+    RESPOSTA: FONT-SIZE QUE NA D1 / D2 TEM MEDIDA EM "EM" E BODY EM "PX".
+
+    2) Qual o tamanho da fonte dos estilos D1 e D2 ? No CSS elas são diferentes ? E no navegador, elas são diferentes ?
+    RESPOSTA: D1 = 2EM / D2 = 1EM --- E SIM, SÃO TAMANHOS DIFERENES TANTO NO CÓDIGO QUANTO NO NAVEGADOR.
+
+    3) Quam é a div pai de D2 ?
+    RESPOSTA: A DIV "D1" É PAI DA DIV "D2" DE ACORDO COM A IDENTAÇÃO DO CÓDIGO HTML.
+
+    4) Quam é o pai de D1 ?
+    RESPOSTA: O PAI DA DIV "D1" É O ELEMENTO HTML <BODY>
+
+    5) Altere o tamanho da fonte do body para 40px e atualize o seu navegador. Quais os textos que foram alterados ?
+    RESPOSTA: TODOS OS TEXTOS FILHOS DO ELEMENTO <BODY> INDEPENDENTE SE FOR ALTERADO PARA MAIOR OU MENOR
+
+    6) Altere o tamanho da fonte de D1 para "1em" e atualize seu navegador. O tamanho do texto de D1 ficou igual a quem ?
+    RESPOSTA: ELA FICA IGUAL AO TAMANHO DA DIV "D2"
+
+    7) Altere o tamanho da fonte de D2 para "2em". O que aconteceu com o texto de D2 ?
+    RESPOSTA: ELE FICA MAIOR
+
+    8) Alterando o tamanho da fonte do body as outras fontes também mudam de tamanho ? Por quê ?
+    RESPOSTA: SIM, MUDAM, PORQUE A MEDIDA EM NÃO É ABSOLUTA, ELA DEPENDE DE OUTROS ATRIBUTOS PARA MUDAR, POR EXEMPLO, TAMANHO DA TELA
+    DO USUÁRIO OU DE OUTROS ELEMENTOS, NESTE CASO, O ELEMENTO PAI BODY FAZ COM QUE O TAMANHO ABSOLUTO SEJA 40 PX
+    FAZENDO COM QUE O ELEMENTO DENTRO QUE POSSUÍ FONT SIZE = 2EM SEJA ---- 2 * 40 PX = 80 PX
+
+    9) Se uma div pai possuir font-size = 100px então uma div filha com font-size = 0.5em terá quantos pixels ?
+    RESPOSTA: 50PX POIS SERIA 100 * 0.5 = 100 / 2 = 50
+
+    10) Se usarmos um font-size = 20px para o body e suas divs filhas tiverem um font-size = 3em então o tamanho das letras terá quantos px ?
+    RESPOSTA: TERÁ --- 20PX --- 20 * 3 = 60 PX
+
+    11) Podemos usar a unidade de medida "em" para outras propriedades como margin, padding, border-width ou somente para font-size ?
+    RESPOSTA: PODEMOS.
+
+    12) Se no lugar da unidade "em" usarmos "rem" o que acontece com o texto da div D2 ?
+    RESPOSTA: ELE FICA MENOR, SENDO 2X O TAMANHO DO DOCUMENTO, QUE EU CHUTO QUE SEJA 16*2PX
+
+    13) Qual a diferença entre "em" e "rem" ?
+    RESPOSTA: O EM HERDA TAMANHO DE ELEMENTOS PAI, JÁ O REM HERDA O TAMANHO COM O TAMANHO BASE DO DOCUMENTO
+
+-->
+
+</body>
+</html>
