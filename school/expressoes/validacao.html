@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validação</title>
+    <style>
+        .--certo {
+            background: lightgreen;
+        }
+        .--errado {
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <P>INSIRA SEU CEP: </P>
+        <input maxlength="9" type="text" placeholder="insira seu CEP" id="cep" onkeyup="ValidarCEP();">
+        <br>
+        <p>INSIRA SEU CPF: </p>
+        <input maxlength="12" type="text" placeholder="insira seu cpf" id="cpf" onkeyup="ValidarCPF();">
+        <br>
+        <p>INSIRA SEU TELEFONE: </p>
+        <input type="text" placeholder="insira seu telefone" id="telefone" onkeyup="ValidarTelefone();">
+    </div>
+</body>
+<script>
+
+//VALIDAR INFORMAÇÕES DENTRO DA AREA DE TEXTO E ALTERAR ESTILO
+
+//PARA BANCO DE DADOS NÃO PERMITIR OUTROS CARACTERES
+//EX CPF -> EXPRESSAO = /[0-9]{11}/G;
+
+    function ValidarCEP() {
+        expressao = /[0-9]{5}-[0-9]{3}$/g;
+        texto = cep.value;
+        resposta = expressao.test(texto); // RETORNA VALOR TRUE / FALSE
+
+        // VERIFICA LARGURA DO TEXTO
+        if (texto.length == 5) {
+            cep.value = texto + '-';
+        }
+
+        // VERIFICA SE TEXTO ESTA DE ACORDO COM EXPRESSAO
+        if (resposta == true) {
+            cep.classList.remove("--errado");
+            cep.classList.add("--certo");
+        }
+        if (resposta == false) {
+            cep.classList.remove("--certo")
+            cep.classList.add("--errado")
+        }
+    }
+
+    function ValidarCPF () {
+        //ACESSE O SITE regex101.com
+        expressao = /[0-9]{9}-[0-9]{2}/g; 
+        texto = cpf.value;
+        resposta = expressao.test(texto);
+
+        if (texto.length==9) {
+            cpf.value = texto + '-';
+        }
+
+        if (resposta == true){
+            cpf.classList.remove("--errado");
+            cpf.classList.add("--certo");
+        }
+        if (resposta == false){
+            cpf.classList.remove("--certo");
+            cpf.classList.add("--errado");
+        }
+    }
+
+    function ValidarTelefone () {
+        expressao = /\([0-9]{2}\) 9 [0-9]{4}-[0-9]{4}$/g
+        texto = telefone.value;
+        resposta = expressao.test(texto);
+
+        if (texto.length==1) {
+            telefone.value = '(' + texto;
+        } if (texto.length==3) {
+            telefone.value = texto + ')';
+        }
+
+        if (resposta == true){
+            telefone.classList.remove("--errado");
+            telefone.classList.add("--certo");
+        }
+        if (resposta == false){
+            telefone.classList.remove("--certo");
+            telefone.classList.add("--errado");
+        }
+    }
+
+</script>
+</html>
