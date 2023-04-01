@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    background: gray;
+}
+
+.quadrado {
+    background-image: url(/images/dog.jpg);
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    aspect-ratio: 1;
+    margin: 20px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .quadrado {
+        background-image: url(/images/pug.jpg);
+    }
+}
+
+@media screen and (min-height: 200px) and (max-height: 400px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .quadrado {
+        background: yellow;
+        height: 100px;
+        aspect-ratio: 1;
+    }
+}
