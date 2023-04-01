@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        :root{
+            --cor1:blue;
+            --cor2:silver;
+            --fundo:lightblue;
+            --largura:200px;
+            --altura: 200px;
+        }
+
+        .principal{
+            background-color: var(--fundo);
+            display: flex;
+            flex-direction: row;
+        }
+        .d{
+            width: var(--largura);
+            height: var(--altura);
+            background-color: var(--cor1);
+            margin: 20px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+            .principal {
+                flex-direction: column;
+            }
+            .d{
+                background-color: var(--cor2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="d"></div>
+        <div class="d"></div>
+        <div class="d"></div>
+    </div>
+
+    <!-- 
+        É possível usar variáveis em CSS ? 
+        R: SIM, utilizando a pseudoclasse :root
+
+        Como declaramos uma variável em CSS ?
+        
+        R: DESTA FORMA:
+
+        :root{
+            --cor1:blue;
+            --cor2:silver;
+            --fundo:lightblue;
+            --largura:200px;
+            --altura: 200px;
+        }
+
+        Como usar uma variável em CSS após criá-la ?
+        R: Utilizando os parâmetros var(--var_name)
+
+        .d{
+            width: var(--largura);
+            height: var(--altura);
+        }
+    -->
+</body>
+</html>
