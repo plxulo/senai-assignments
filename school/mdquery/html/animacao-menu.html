@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação de menu</title>
+    <style>
+        .principal
+        {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+            top:100px;
+            left: 0px;
+        }
+        .central
+        {
+            cursor: pointer;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: yellow;
+            top:75px;
+            left:75px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .op1
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: red;
+            top:15px;
+            left:75px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .op2
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: green;
+            top:75px;
+            right:15px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        .op3
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: pink;
+            bottom:15px;
+            left:75px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .anima_op1 {
+            animation: recolhe_op1 2s forwards;
+        }
+
+        @keyframes recolhe_op1 {
+
+            0% {
+                top: 15px;
+                left: 75px;
+            }
+
+            100% {
+                top: 75px;
+                left: 75px;
+            }
+
+        }
+
+        .anima_op2 {
+            animation: recolhe_op2 2s forwards;
+        }
+
+        @keyframes recolhe_op2 {
+
+            0% {
+                top: 75px;
+                right: 15px;
+            }
+
+            100% {
+                top: 75px;
+                right: 75px;
+            }
+
+        }
+
+        .anima_op3 {
+            animation: recolhe_op3 2s forwards;
+        }
+
+        @keyframes recolhe_op3 {
+
+            0% {
+                bottom: 15px;
+                left: 75px;
+            }
+
+            100% {
+                bottom: 75px;
+                left: 75px;
+            }
+
+        }
+
+
+        .animado {
+            transition: all 0.3s ease-out;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="principal">
+        <div onclick="ExecutarMenu();" class="central">  </div>
+        <div class="op1" id="op1"> A </div>
+        <div class="op2" id="op2"> B </div>
+        <div class="op3" id="op3"> C </div>
+    </div>
+</body>
+
+<script>
+    function ExecutarMenu()
+    {
+
+        const elementos = [
+            { id: "op1", class: "anima_op1" },
+            { id: "op2", class: "anima_op2" },
+            { id: "op3", class: "anima_op3" }
+        ];
+
+        elementos.forEach(function (el) {
+            const elemento = document.getElementById(el.id);
+            elemento.classList.add(el.class);
+        });
+
+    }
+</script>
+</html>
