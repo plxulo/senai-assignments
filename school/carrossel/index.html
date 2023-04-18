@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Carrossel</title>
+    <style>
+        .imagem
+        {
+            position: absolute; 
+            top:0px;
+            left:0px;
+        }
+        .moldura
+        {
+            position: relative; /* Todas as imagens estão dentro da moldura */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="moldura">
+        <img class="imagem" id="imagem1" src="1.jpg" >
+        <img class="imagem" id="imagem2" src="2.jpg" >
+        <img class="imagem" id="imagem3" src="3.jpg" >
+    </div>
+    <br><br><br><br><br>
+    <button onclick="Esconder()">Esconder</button>
+    <button onclick="Mostrar()">Mostrar</button>
+</body>
+
+<script src="jquery-3.6.4.min.js">
+    // BAIXE ESTE ARQUIVO EM:  https://jquery.com/download/
+    // Clique com o botão direito em Download compressed e salve na mesma pasta.
+</script>
+
+<script>
+        
+        setInterval(carrossel, 3000); // EXECUTA A FUNÇÃO "carrossel" A CADA 3 SEGUNDOS
+        
+        var IMAGEM=0;
+
+        function Esconder()
+        {
+            $("#imagem4").animate({marginLeft:"-300px"}, 1000);
+        }
+
+        function Mostrar()
+        {
+            $("#imagem4").animate({marginLeft:"0px"}, 1000);
+        }
+
+        function carrossel()
+        {
+            IMAGEM = IMAGEM + 1;
+            if(IMAGEM==1)
+            {
+                $("#imagem1").animate({opacity:'1'},2000);
+                $("#imagem2").animate({opacity:'0'},1000);
+                $("#imagem3").animate({opacity:'0'},1000);         
+            }
+            if(IMAGEM==2)
+            {
+                $("#imagem1").animate({opacity:'0'},1000);
+                $("#imagem2").animate({opacity:'1'},2000);
+                $("#imagem3").animate({opacity:'0'},1000);         
+            }
+            if(IMAGEM==3)
+            {
+                $("#imagem1").animate({opacity:'0'},1000);
+                $("#imagem2").animate({opacity:'0'},1000);
+                $("#imagem3").animate({opacity:'1'},2000); 
+                IMAGEM=0;
+            }
+            
+        }
+</script>
+
+</html>
