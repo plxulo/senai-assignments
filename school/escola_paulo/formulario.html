@@ -10,7 +10,7 @@
 
 <body>
   <section>
-    <form class="formulario" action="inserir.php" method="post">
+    <form class="formulario" action="crud.php" method="post">
       <label for="matricula">Digite a matrícula do aluno:</label>
       <input type="text" name="matricula">
       <br> <br>
@@ -19,7 +19,12 @@
       <br> <br>
       <label for="idade">Digite a idade do aluno:</label>
       <input size="9" type="number" name="idade">
-      <input type="submit" value="Salvar">
+
+      <input type="submit" value="Inserir" name="inserir">
+      <input type="submit" value="Excluir" name="excluir">
+      <input type="submit" value="Alterar" name="alterar">
+      <input type="submit" value="Listar" name="listar">
+
     </form>
   </section>
 </body>
