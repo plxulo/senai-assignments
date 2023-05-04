@@ -12,7 +12,7 @@
   <section>
     <form class="formulario" action="inserir.php" method="post">
       <label for="matricula">Digite a matrícula do aluno:</label>
-      <input type="text" name="matricula">
+      <input type="text" name="matricula" id="matricula">
       <br> <br>
       <label for="nome">Digite o nome do aluno:</label>
       <input type="text" name="nome">
@@ -20,8 +20,20 @@
       <label for="idade">Digite a idade do aluno:</label>
       <input size="9" type="number" name="idade">
       <input type="submit" value="Salvar">
+
     </form>
+    <!-- Tem de estar fora do formulário para não conflitar com inserir.php -->
+    <button onclick="excluir();">Excluir</button>
   </section>
 </body>
+
+<script>
+  function excluir() {
+    let m = matricula.value;
+    //Abre outra janela
+    // Chama arquivo php e envia a variável m na mesma aba
+    window.open("excluir.php?m="+m,"_self");
+  }
+</script>
 
 </html>
