@@ -13,7 +13,7 @@ body {
 }
 
 .teclado {
-  background: orange;
+  background: darkslategray;
   display: flex;
   flex-direction: column;
   width: 90%;
