@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teclado {
+  background: orange;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 30px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+a {
+  font-size: 20px;
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  width: fit-content;
+  text-align: center;
+  border-color: black;
+  min-width: 30px;
+  margin-left: 5px;
+}
+
+.Linha1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Linha1 button {
+  height: 35px;
+}
+
+.fs button {
+  width: 100px;
+}
+
+.Linha2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Linha3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Linha4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Linha5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Linha6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Linha6 button {
+  height: 100px;
+}
+
+button {
+  width: 100px;
+  height: 75px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(12, 97, 255);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all .3s ease;
+  box-shadow: rgb(0, 46, 131) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+button:hover {
+  box-shadow: rgb(6, 93, 255) 0px 7px 0px 0px;
+}
+
+button:active {
+  background-color: rgb(160, 193, 255);
+  /*50, 168, 80*/
+  box-shadow: rgb(160, 193, 255) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.backspace {
+  width: 175px;
+}
+
+.enter {
+  width: 150px;
+}
+
+.ctrl {
+  width: 180px;
+}
+
+.alt {
+  width: 180px;
+}
+
+.espaco {
+  width: 457px;
+}
+
+.shift {
+  width: 200px;
+}
+
+.Linha6 .key {
+  height: 50px;
+}
+
+.key_left, .key_right {
+  height: 50px;
+  align-self: flex-end;
+}
