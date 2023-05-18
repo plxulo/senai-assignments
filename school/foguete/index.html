@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foguete</title>
+</head>
+
+<style>
+  body {
+    height: 101vh;
+    background: url(espaco.jpg);
+    background-size: 100%;
+    overflow: hidden;
+  }
+
+  .foguete {
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    margin-left: -40px;
+    top: 100vh;
+    margin-top: -25px;
+  }
+</style>
+
+<body>
+  <img src="foguete2.gif" alt="" srcset="" width="135px" class="foguete" id="foguete">
+  <img src="Death-Star" alt="" srcset="" style="scale:0.5">
+</body>
+
+<script>
+  //Valor inicial
+  d = new Date();
+  tempo_inicial = d.getTime();
+
+  temporizador = setTimeout(Subir, 1000);
+  x = 0;
+  y = 100;
+  ESQUERDA = "";
+  TOPO = "";
+
+  function Subir() {
+    ESQUERDA = x + "px";
+    TOPO = y + "px";
+
+    $("#foguete").animate({top: TOPO}, 2500);
+
+    temporizador = null; // Cancela animação subir atribuindo null
+    temporizador = setInterval(Descer, 500);
+  }
+
+  function Descer() {
+    y = y + 20;
+    TOPO = y + "px";
+    if (y > 750) {
+      y = 750;
+    }
+    $("#foguete").animate({left: ESQUERDA, top: TOPO}, 2000);
+  }
+  document.onkeydown = Pega_Tecla;
+
+  function Pega_Tecla(e) 
+  {   
+    e = e || window.event;
+
+    tecla = e.keyCode;
+    console.log(tecla); // MOSTRA O CÓDIGO DA TECLA PRESSIONADA
+
+    d2 = new Date ();
+    tempo_final = d2.getTime();
+    if(tempo_final-tempo_inicial>2000)
+    {
+      tempo_inicial = tempo_final
+
+      if(tecla == 37)
+      {
+        $("#foguete").stop()
+        x = x - 20
+        ESQUERDA = x + "px"
+        Descer()
+      }
+      if(tecla == 39)
+      {
+        $("#foguete").stop()
+        x = x + 20
+        ESQUERDA = x + "px"
+        Descer()
+      }
+    }
+  }
+</script>
+<script src="jquery-3.7.0.min.js"></script>
+
+</html>
