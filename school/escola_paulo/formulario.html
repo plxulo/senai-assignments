@@ -12,21 +12,36 @@
   <section>
     <form class="formulario" action="crud.php" method="post">
       <label for="matricula">Digite a matrícula do aluno:</label>
-      <input type="text" name="matricula">
+      <input type="text" name="matricula" id="matricula">
       <br> <br>
       <label for="nome">Digite o nome do aluno:</label>
       <input type="text" name="nome">
       <br> <br>
       <label for="idade">Digite a idade do aluno:</label>
       <input size="9" type="number" name="idade">
+<<<<<<< HEAD
 
       <input type="submit" value="Inserir" name="inserir">
       <input type="submit" value="Excluir" name="excluir">
       <input type="submit" value="Alterar" name="alterar">
       <input type="submit" value="Listar" name="listar">
+=======
+      <input type="submit" value="Salvar">
+>>>>>>> 1bc1f1d700593e032c2921eb4eef9fc94f9e39c2
 
     </form>
+    <!-- Tem de estar fora do formulário para não conflitar com inserir.php -->
+    <button onclick="excluir();">Excluir</button>
   </section>
 </body>
+
+<script>
+  function excluir() {
+    let m = matricula.value;
+    //Abre outra janela
+    // Chama arquivo php e envia a variável m na mesma aba
+    window.open("excluir.php?m="+m,"_self");
+  }
+</script>
 
 </html>

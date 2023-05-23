@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <title>teclado</title>
+</head>
+
+<body>
+  <div class="teclado">
+    <div class="Linha1">
+      <button id="27" class="esc">esc</button>
+      <div class="fs">
+        <button>f1</button>
+        <button>f2</button>
+        <button>f3</button>
+        <button>f4</button>
+        <button>f5</button>
+        <button>f6</button>
+        <button>f7</button>
+        <button>f8</button>
+        <button>f9</button>
+        <button>f10</button>
+        <button>f11</button>
+        <button>f12</button>
+      </div>
+    </div>
+    <br>
+
+    <div class="Linha2">
+      <button id="192">~<br>`</button>
+      <button id="49">!<br>1</button>
+      <button id="50">@<br>2</button>
+      <button id="51">#<br>3</button>
+      <button id="52">$<br>4</button>
+      <button id="53">%<br>5</button>
+      <button id="54">¨<br>6</button>
+      <button id="55">&<br>7</button>
+      <button id="56">*<br>8</button>
+      <button id="57">(<br>9</button>
+      <button id="48">)<br>0</button>
+      <button id="189">_<br>-</button>
+      <button id="187">+<br>=</button>
+      <button id="8" class="backspace">backspace</button>
+    </div>
+    <br>
+    <div class="Linha3">
+      <button id="9">tab</button>
+      <button id="81">q</button>
+      <button id="87">w</button>
+      <button id="69">e</button>
+      <button id="82">r</button>
+      <button id="84">t</button>
+      <button id="89">y</button>
+      <button id="85">u</button>
+      <button id="73">i</button>
+      <button id="79">o</button>
+      <button id="80">p</button>
+      <button id="219">{<br>[</button>
+      <button id="221">}<br>]</button>
+      <button id="226">|<br>\</button>
+    </div>
+    <br>
+    <div class="Linha4">
+      <button id="20">lupa</button>
+      <button id="65">a</button>
+      <button id="83">s</button>
+      <button id="68">d</button>
+      <button id="70">f</button>
+      <button id="71">g</button>
+      <button id="72">h</button>
+      <button id="74">j</button>
+      <button id="75">k</button>
+      <button id="76">l</button>
+      <button id="186">:<br>;</button>
+      <button id="222">"<br>'</button>
+      <button id="13" class="enter">enter</button>
+    </div>
+    <br>
+    <div class="Linha5">
+      <button id="16" class="shift"> shift </button>
+      <button id="90">z</button>
+      <button id="88">x</button>
+      <button id="67">c</button>
+      <button id="86">v</button>
+      <button id="66">b</button>
+      <button id="78">n</button>
+      <button id="77">m</button>
+      <button id="188">
+        <<br>,
+      </button>
+      <button id="190">><br>.</button>
+      <button id="191">?<br>/</button>
+      <button id="16" class="shift">shift</button>
+    </div>
+    <br>
+    <div class="Linha6">
+      <button id="17" class="ctrl"> ctrl </button>
+      <button id="18" class="alt">alt</button>
+      <button id="32" class="espaco"> ESPAÇO</button>
+      <button id="18">alt</button>
+      <button id="17">ctrl</button>
+      <button id="37" class="key key_left">⬅</button>
+      <button id="" class="key_up_down">⬆<br><hr width="100%">⬇</button>
+      <button id="39"class="key key_right">➡</button>
+    </div>
+  </div>
+</body>
+<script>
+
+  document.onkeydown = Pega_Tecla;
+
+  function Pega_Tecla(e) {
+    e = e || window.event;
+
+    tecla = e.keyCode;
+    console.log(tecla);
+    TirarCores();
+    document.getElementById(tecla).style.backgroundColor = "rgb(160, 193, 255)";
+  }
+
+  function TirarCores() {
+    for (x=1; x<=300; x++) {
+      try {
+        document.getElementById(x).style.backgroundColor = "rgb(12, 97, 255)";
+        document.getElementById(x).style.color = "white";
+      }
+      catch(erro)
+      { }
+    }
+  }
+</script>
+
+</html>
+
+</html>

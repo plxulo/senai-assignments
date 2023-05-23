@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.🏡 {
+    display: none;
+    height: 200px;
+    aspect-ratio: 1;
+    background: linear-gradient(45deg, blue, red);
+    border: solid 3px black;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+    top: 50vh;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.❌ {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: none;
+}
+
+@media print {
+    .🎶🎂 {
+        display: none;
+    }
+    .✨🎁 {
+        display: none;
+    }
+    .👢 {
+        display: none;
+    }
+}
